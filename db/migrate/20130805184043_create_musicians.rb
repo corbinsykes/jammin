@@ -5,8 +5,8 @@ class CreateMusicians < ActiveRecord::Migration
       t.string :lastname
       t.string :email
       t.string :instrument
-      t.string :password_hash
-      t.string :password_salt
+      t.string :password
+      t.string :password_confirmation
       t.timestamps
     end
   end
