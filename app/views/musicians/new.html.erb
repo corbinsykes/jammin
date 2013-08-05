@@ -1,0 +1,31 @@
+<h1>Sign Up</h1>
+
+<%= form_for @musician do |f| %>
+
+<% if @musician.errors.any? %>
+  <div class="alert alert-error text-error">
+    <h2> Bad input! </h2>
+    <ul>
+
+      <% @musician.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= f.label :email %></br>
+<%= f.text_field :email %></br>
+<%= f.label :password %></br>
+<%= f.password_field :password %></br>
+<%= f.label :password_confirmation %></br>
+<%= f.password_field :password_confirmation %></br>
+<%= f.label :first_name %></br>
+<%= f.text_field :firstname %></br>
+<%= f.label :last_name %></br>
+<%= f.text_field :lastname %></br>
+<%= f.label :instrument %></br>
+<%= f.text_field :instrument %></br>
+<%= f.submit %>
+
+<% end %>
