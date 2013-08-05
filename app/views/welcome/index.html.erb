@@ -2,14 +2,14 @@
 
 <h1> Sign up </h1>
 
-<%= form_for @users do |f| %>
+<%= form_for @musicians do |f| %>
 
-<% if @users.errors.any? %>
+<% if @musicians.errors.any? %>
   <div class="alert alert-error text-error">
     <h2> Bad input! </h2>
     <ul>
 
-      <% @users.errors.full_messages.each do |msg| %>
+      <% @musicians.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
         <% end %>
     </ul>
