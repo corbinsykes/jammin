@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130805184043) do
+ActiveRecord::Schema.define(:version => 20130805203358) do
+
+  create_table "jamsessions", :force => true do |t|
+    t.integer  "venue_id"
+    t.integer  "musician_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "musicians", :force => true do |t|
     t.string   "firstname"
@@ -20,8 +27,9 @@ ActiveRecord::Schema.define(:version => 20130805184043) do
     t.string   "instrument"
     t.string   "password"
     t.string   "password_confirmation"
-    t.datetime "created_at",            :null => false
-    t.datetime "updated_at",            :null => false
+    t.boolean  "creator",               :default => false
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -31,6 +39,15 @@ ActiveRecord::Schema.define(:version => 20130805184043) do
     t.string   "salt"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+  end
+
+  create_table "venues", :force => true do |t|
+    t.string   "address"
+    t.string   "zipcode"
+    t.string   "start_time"
+    t.string   "end_time"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

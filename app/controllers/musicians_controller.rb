@@ -10,9 +10,13 @@ class MusiciansController < ApplicationController
     @musician = Musician.new(params[:musician])
     if @musician.save
       auto_login @musician  #autologin is a sorcery method that keeps player logged in
-      redirect_to '/', :notice => "Signed up!"
+      redirect_to user_path(current_user.id), :notice => "Signed up!"
     else
       render "new"
     end
+  end
+
+  def show
+
   end
 end

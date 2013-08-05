@@ -7,6 +7,7 @@ class CreateMusicians < ActiveRecord::Migration
       t.string :instrument
       t.string :password
       t.string :password_confirmation
+      t.boolean :creator, :default => :false
       t.timestamps
     end
   end
