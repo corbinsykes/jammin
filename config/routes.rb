@@ -5,7 +5,8 @@ Jammin::Application.routes.draw do
   get '/sign_up' => 'musicians#new', as: 'sign_up'
 
   post '/musicians' => 'musicians#create'
-  get '/musicians' => 'musicians#index', as: :musicians
+  get '/musicians' => 'musicians#index', as: 'musicians'
+  get '/musicians/:id' => 'musicians#show', as: 'musician'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

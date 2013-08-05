@@ -1,5 +1,6 @@
 class MusiciansController < ApplicationController
   def index
+    @musicians = Musician.all
   end
 
   def new
@@ -14,5 +15,10 @@ class MusiciansController < ApplicationController
     else
       render "new"
     end
+  end
+
+  def show
+    id = params[:id]
+    @musician = Musician.find(id)
   end
 end
