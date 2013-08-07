@@ -1,5 +1,5 @@
 class Jam < ActiveRecord::Base
   has_many :musicians
-  has_one :venue
+  belongs_to :venue
   has_many :instruments
 end
