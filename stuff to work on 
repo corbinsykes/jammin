@@ -1,0 +1,11 @@
+Tonight with Jason
+
+1) Fixer user authentication and log-in so that we can jump from view to view and so that log out option appears as link referencing given user's email in upper right hand corner upon log in.
+
+2) Checkboxes on Sign up page that list instruments so person signing can check multiple boxes ---
+should be a model ??
+
+
+3) Google maps api to display map of all potential jam venues at once
+
+Join a Jam view
