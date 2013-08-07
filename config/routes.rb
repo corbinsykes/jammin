@@ -1,5 +1,7 @@
 Jammin::Application.routes.draw do
 
+  get '/about' => 'welcome#about', as: 'about'
+
   get 'log_in' => 'sessions#new', as: 'log_in'
   post 'log_in' => 'sessions#create', as: 'create_session'
   get 'sign_up' => 'musicians#new', as: 'sign_up'

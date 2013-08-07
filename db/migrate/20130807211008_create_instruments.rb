@@ -4,5 +4,4 @@ class CreateInstruments < ActiveRecord::Migration
       t.string :name
     end
   end
-
 end
