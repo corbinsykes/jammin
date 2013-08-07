@@ -1,0 +1,10 @@
+<h1> Available Jam Sessions </h1>
+
+
+<% @jam_sessions.each do |jam_session| %>
+<%= jam_session.venue.address %>
+<%= jam_session.musician.firstname %>
+
+<%= jam_session.musician.lastname %>
+<%= jam_session.musician.gravitar %>
+<%= jam_session.musician.instrument %>

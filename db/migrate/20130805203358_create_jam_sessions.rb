@@ -4,6 +4,7 @@ class CreateJamSessions < ActiveRecord::Migration
       t.integer :venue_id
       t.integer :musician_id
 
+
       t.timestamps
     end
   end
