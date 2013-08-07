@@ -1,13 +1,17 @@
 Jammin::Application.routes.draw do
+
+  get 'log_in' => 'sessions#new', as: 'log_in'
+  post 'log_in' => 'sessions#create', as: 'create_session'
+  get 'sign_up' => 'musicians#new', as: 'sign_up'
+  get 'log_out' => 'sessions#destroy', as: 'log_out'
+
   root :to => 'welcome#index'
-
-  get '/log_in' => 'sessions#new', as: 'log_in'
-  get '/sign_up' => 'musicians#new', as: 'sign_up'
-
+  get '/venues' => 'venues#index', as: 'venues'
   post '/musicians' => 'musicians#create'
   get '/musicians' => 'musicians#index', as: 'musicians'
   get '/musicians/:id' => 'musicians#show', as: 'musician'
 
+  get '/jam_sessions' => 'jam_sessions#index', as: 'jam_sessions'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
