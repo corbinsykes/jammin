@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130805203358) do
+ActiveRecord::Schema.define(:version => 20130807194728) do
+
+  create_table "jams", :force => true do |t|
+    t.integer  "venue_id"
+    t.integer  "creator_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "jamsessions", :force => true do |t|
     t.integer  "venue_id"
