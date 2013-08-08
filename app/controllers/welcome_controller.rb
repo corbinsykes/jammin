@@ -5,4 +5,7 @@ class WelcomeController < ApplicationController
 
     redirect_to '/log_in'
   end
+
+  def about
+  end
 end
