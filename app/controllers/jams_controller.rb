@@ -11,5 +11,8 @@ class JamsController < ApplicationController
   end
 
   def start
+    @jam = Jam.new
+    @instruments = Instrument.all
+    @venues = Venue.all
   end
 end
