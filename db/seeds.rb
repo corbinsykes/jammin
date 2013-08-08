@@ -14,6 +14,10 @@ jam.musicians << musician1
 jam.musicians << musician2
 jam.musicians << musician3
 
+musician1.instruments << instrument1
+musician2.instruments << instrument4
+musician3.instruments << instrument3
+
 jam.instruments << instrument1
 jam.instruments << instrument2
 jam.instruments << instrument3

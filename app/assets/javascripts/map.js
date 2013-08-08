@@ -6,4 +6,6 @@ window.onload = function(){
 
   var map = new google.maps.Map(document.getElementById("map"),
     mapOptions);
+
+  // $.ajax()
 };

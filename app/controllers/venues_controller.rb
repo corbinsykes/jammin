@@ -4,9 +4,7 @@ class VenuesController < ApplicationController
     @venues = Venue.all
     respond_to do|format|
       format.html
-      format.json {render json: @venues}
+      format.json {render json: @venues, root: false}
     end
   end
-
-
 end
