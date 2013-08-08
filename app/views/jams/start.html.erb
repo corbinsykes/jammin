@@ -1,1 +1,13 @@
 <h1>Start a Jam</h1>
+
+<%= form_for @jam do |f| %>
+  <%= f.select(:venue, Venue.all.map {|p| [p.address]}, :prompt => "Select a Venue") %>
+<% end %>
+
+
+  <p>Instrument(s)</p>
+    <% @instruments.each do |instrument| %>
+      <input type="checkbox">
+      <%= instrument.name %>
+    <% end %>
+</br>
