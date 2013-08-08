@@ -57,6 +57,9 @@ ActiveRecord::Schema.define(:version => 20130808030410) do
 
   create_table "venues", :force => true do |t|
     t.string   "address"
+    t.string   "zipcode"
+    t.string   "start_time"
+    t.string   "end_time"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
