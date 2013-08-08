@@ -5,4 +5,5 @@ class Musician < ActiveRecord::Base
   gravtastic :filetype => :gif, :rating => "PG", :default => "identicon"
 
   attr_accessible :firstname, :lastname, :email, :instrument, :password, :password_confirmation
+  has_and_belongs_to_many :instruments
 end

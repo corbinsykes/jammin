@@ -4,6 +4,10 @@ class MusiciansController < ApplicationController
 
   def index
     @musicians = Musician.all
+    respond_to do|format|
+      format.html
+      format.json {render json: @musicians}
+    end
   end
 
   def new
