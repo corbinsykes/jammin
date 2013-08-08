@@ -1,4 +1,7 @@
 class MusiciansController < ApplicationController
+  skip_before_filter :check_authentication, only: [:new, :create]
+
+
   def index
     @musicians = Musician.all
   end
