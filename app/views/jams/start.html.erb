@@ -1,7 +1,20 @@
 <h1>Start a Jam</h1>
 
 <%= form_for @jam do |f| %>
-  <%= f.select(:venue, Venue.all.map {|p| [p.address]}, :prompt => "Select a Venue") %>
+  <!--# f.select(:venue, Musician.all.map {|m| [m.firstname] [m.lastname]}, :prompt => "Select a Venue")  -->
+  <!--  @current_user.firstname %>
+  <!-- @current_user.lastname %>
+  <!-- @venue.name %> -->
+  <%= f.label :genre %>
+  <%= f.text_field :genre %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.label :start_time %>
+  <%= f.text_field :start_time %>
+  <%= f.label :end_time %>
+  <%= f.text_field :end_time %>
+  <%= f.submit "Save Jam" %>
+
 <% end %>
 
 

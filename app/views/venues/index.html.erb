@@ -10,8 +10,14 @@
 
 $(document).ready(function() {
   var map = createMap(40.70771, -73.940398);
-  <%- @venues.each do |venue|  %>
+<%- @venues.each do |venue|  %>
   createVenueMarker(map, <%= venue.latitude %>, <%= venue.longitude %>, '<%= h venue.name %>');
   <%- end %>
 });
 </script>
+
+
+<div id = "jam-options">
+  <ul id = "jam-list">
+  </ul>
+  </div>
