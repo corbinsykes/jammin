@@ -8,6 +8,7 @@ class VenuesController < ApplicationController
     end
   end
 
+
   def new
     @address = Address.new
   end
@@ -22,5 +23,12 @@ class VenuesController < ApplicationController
       redirect_to venues_path
     end
   end
+
+
+  # need something like this...
+  # def create
+  #   create new venue
+  #   geocode the address
+  # end
 
 end

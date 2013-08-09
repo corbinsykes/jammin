@@ -2,7 +2,7 @@ musician1 = Musician.create(firstname: 'Sample1', lastname: 'Person A', email: '
 musician2 = Musician.create(firstname: 'Sample2', lastname: 'Person B', email: 'fake2@example.com', instrument: 'cello')
 musician3 = Musician.create(firstname: 'Sample3', lastname: 'Person C', email: 'fake3@example.com', instrument: 'guitar')
 
-venue = Venue.create(address: '110 5th Ave')
+venue = Venue.create(address: '110 5th Ave 10011')
 
 instrument1 = Instrument.create(name: 'Guitar')
 instrument2 = Instrument.create(name: 'Bass')
