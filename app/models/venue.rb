@@ -12,4 +12,5 @@ class Venue < ActiveRecord::Base
   #     errors[:end_time] << "must be after start time"
   #   end
   # end
+
 end

@@ -8,6 +8,7 @@ class MusiciansController < ApplicationController
       format.html
       format.json {render json: @musicians}
     end
+
   end
 
   def new
