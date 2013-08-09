@@ -1,9 +1,17 @@
+<div class='container'>
 <h1> Venues </h1>
+<%= link_to "Create New Venue", new_venue_path %>
+</div>
 
-<% @venues.each do |venue| %>
-  <%= venue.address %>
-<% end %>
+<div id="map">
+</div>
 
+<script type='text/javascript'>
 
-<% link_to venue %>
-
+$(document).ready(function() {
+  var map = createMap(40.70771, -73.940398);
+  <%- @venues.each do |venue|  %>
+  createVenueMarker(map, <%= venue.latitude %>, <%= venue.longitude %>, '<%= h venue.name %>');
+  <%- end %>
+});
+</script>

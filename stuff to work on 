@@ -9,3 +9,14 @@ should be a model ??
 3) Google maps api to display map of all potential jam venues at once
 
 Join a Jam view
+
+
+
+1) Make sure models are okay
+
+question of musician having many venues
+where should musician list venues
+or musician profile allowing musician to add addtional venues
+
+get markers on maps to work -->
+

@@ -15,8 +15,3 @@
       </div>
     </div>
   </div>
-  <div class="container">
-    <% flash.each do |name, msg| %>
-      <%= content_tag(:div, raw(msg), class: "alert alert-#{name}") %>
-    <% end %>
-  </div>

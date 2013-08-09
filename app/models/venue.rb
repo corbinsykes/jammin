@@ -1,6 +1,5 @@
 class Venue < ActiveRecord::Base
-  attr_accessible :start_time, :end_time, :address, :zipcode
-
+  attr_accessible :name, :latitude, :longitude
   has_many :jams
   belongs_to :musician
 

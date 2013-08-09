@@ -1,4 +1,4 @@
 class VenueSerializer < ActiveModel::Serializer
-  attributes :id, :address, :zipcode
+  attributes :id, :latitude, :longitude
   has_many :jams
 end

@@ -8,7 +8,11 @@ Jammin::Application.routes.draw do
   get 'log_out' => 'sessions#destroy', as: 'log_out'
 
   root :to => 'welcome#index'
+
   get '/venues' => 'venues#index', as: 'venues'
+  get '/venues/new' => 'venues#new', as: 'new_venue'
+  post '/venues' => 'venues#create', as: 'addresses'
+
   post '/musicians' => 'musicians#create'
   get '/musicians' => 'musicians#index', as: 'musicians'
   get '/musicians/:id' => 'musicians#show', as: 'musician'
