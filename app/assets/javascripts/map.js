@@ -30,4 +30,15 @@ function addMarkers(venues){
   }
 }
 
+//Something like:
+//var venues = [];
+//venues << Venue.all
+//for loop thru venues
+
+//take the .address of each venue and run it thru Geocoder
+// maybe do this part when you create a venue.
+// so maybe migrate your db add lat lng columns
+//result = Geocoder.search(Venue.address)
+//result[0].data["geometry"]["location"]["lat"]
+//result[0].data["geometry"]["location"]["lng"]
 
