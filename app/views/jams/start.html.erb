@@ -1,6 +1,4 @@
-<h1>Start a Jam</h1>
-
-<%= form_for @jam do |f| %>
+<%= form_for @jam, remote: true do |f| %>
   <!--# f.select(:venue, Musician.all.map {|m| [m.firstname] [m.lastname]}, :prompt => "Select a Venue")  -->
   <!--  @current_user.firstname %>
   <!-- @current_user.lastname %>
@@ -13,14 +11,19 @@
   <%= f.text_field :start_time %>
   <%= f.label :end_time %>
   <%= f.text_field :end_time %>
-  <%= f.submit "Save Jam" %>
-
+  <%= f.submit "Save Jam", class: 'btn btn-primary' %>
+  <%= render partial: 'shared/instruments', locals: {instruments: @instruments, form: f} %>
 <% end %>
 
-
-  <p>Instrument(s)</p>
-    <% @instruments.each do |instrument| %>
-      <input type="checkbox">
-      <%= instrument.name %>
-    <% end %>
-</br>
+<script type='text/javascript'>
+$(document).ready(function(){
+  $('.new_jam').bind('ajax:success', function(){
+    alert("Jam session created!");
+    $('#create-jam-session').modal('hide');
+  });
+  $('.new_jam').bind('ajax:error', function(){
+    alert("Jam session couldn't be created. Please try again.");
+    $('#create-jam-session').modal('hide');
+  });
+});
+</script>

@@ -1,7 +1,7 @@
 class Address
   extend ActiveModel::Naming
   include ActiveModel::Conversion  ## takes care of initialize for us
-  attr_accessor :name, :street, :city, :state, :zipcode
+  attr_accessor :name, :street, :city, :state, :zipcode, :creator_id
 
   def initialize(options={})
     @name = options[:name]
@@ -9,7 +9,7 @@ class Address
     @city = options[:city]
     @state = options[:state]
     @zipcode = options[:zipcode]
-
+    @creator_id = options[:creator_id]
   end
 
   def persisted?; false; end
@@ -20,6 +20,6 @@ class Address
 
     latitude = address.first.latitude
     longitude = address.first.longitude
-    Venue.new name: name, latitude: latitude, longitude: longitude
+    Venue.new name: name, latitude: latitude, longitude: longitude, creator_id: creator_id
   end
 end

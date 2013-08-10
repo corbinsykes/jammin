@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130809204356) do
+ActiveRecord::Schema.define(:version => 20130810175931) do
 
   create_table "instruments", :force => true do |t|
     t.string "name"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20130809204356) do
     t.string   "latitude"
     t.string   "longitude"
     t.string   "name"
+    t.integer  "creator_id"
   end
 
 end

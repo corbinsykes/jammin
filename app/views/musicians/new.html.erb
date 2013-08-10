@@ -22,13 +22,7 @@
 <%= f.text_field :firstname %></br>
 <%= f.label :last_name %></br>
 <%= f.text_field :lastname %></br>
-
-
-<p>Instrument(s)</p>
-<% @instruments.each do |instrument| %>
-  <input type="checkbox">
-  <%= instrument.name %>
-<% end %>
+<%= render partial: 'shared/instruments', locals: {instruments: @instruments, form: f} %>
 </br>
 <%= f.submit %>
 <!--

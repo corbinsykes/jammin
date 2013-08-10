@@ -1,18 +1,16 @@
 <div class="navbar">
-    <div class="navbar-inner">
-      <div class = "container">
-        <a href="/about" class="brand"> Jam with Friends</a>
-        <ul class="nav">
-          <li><%= link_to "Musicians", musicians_path %></li>
-          <li><%= link_to "Join a Jam", join_jams_path %> </li>
-          <li><%= link_to "Start a Jam", start_jams_path %> </li>
-          <li><%= link_to "Create a Venue", new_venue_path %></li>
-        </ul>
-        <%- if logged_in? %>
-        <ul class='nav'>
-          <li class='push-right'><%= link_to "Logout (#{current_user.email})", log_out_path%> </li>
-        </ul>
-        <%- end %>
-      </div>
+  <div class="navbar-inner">
+    <div class = "container">
+      <a href="/about" class="brand"> Jam with Friends</a>
+      <ul class="nav">
+        <li><%= link_to "Musicians", musicians_path %></li>
+        <li><%= link_to "Venues", venues_path %></li>
+      </ul>
+      <%- if logged_in? %>
+      <ul class='nav'>
+        <li class='push-right'><%= link_to "Logout (#{current_user.email})", log_out_path%> </li>
+      </ul>
+      <%- end %>
     </div>
   </div>
+</div>

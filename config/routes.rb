@@ -18,6 +18,8 @@ Jammin::Application.routes.draw do
   get '/musicians/:id' => 'musicians#show', as: 'musician'
 
   get '/jams' => 'jams#index', as: 'jams'
+  post '/jams' => 'jams#create'
+  put '/jams/:id' => 'jams#update', as: 'jam'
   get '/jams/join' => 'jams#join', as: 'join_jams'
   get '/jams/start' => 'jams#start', as: 'start_jams'
   # The priority is based upon order of creation:

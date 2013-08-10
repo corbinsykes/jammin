@@ -10,14 +10,42 @@
 
 $(document).ready(function() {
   var map = createMap(40.70771, -73.940398);
-<%- @venues.each do |venue|  %>
-  createVenueMarker(map, <%= venue.latitude %>, <%= venue.longitude %>, '<%= h venue.name %>');
+  <%- @venues.each do |venue|  %>
+  createVenueMarker(map, <%= raw venue.to_json %>);
   <%- end %>
 });
 </script>
 
+<div class="modal fade" id="join-jam-session">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Join a Jam Session</h4>
+      </div>
+      <div class="modal-body"></div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="create-jam-session">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Create a Jam Session</h4>
+      </div>
+      <div class="modal-body"></div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <div id = "jam-options">
   <ul id = "jam-list">
   </ul>
-  </div>
+</div>

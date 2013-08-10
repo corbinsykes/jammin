@@ -1,4 +1,32 @@
-<h1>Join a Jam</h1>
+<% @jams.each do |jam| %>
+  <!-- need to show times, genre, etc. -->
+  <%= form_for(jam, remote: true) do |f| %>
+    <div>
+      <span>
+        <%= jam.description %>
+      </span>
+      <span>
+        <%= jam.start_time %>
+      </span> to
+      <span>
+        <%= jam.end_time %>
+      </span>
+      <span>
+        <%= f.submit 'Join' %>
+      </span>
+    </div>
+  <% end %>
+<% end %>
 
-<div id="map">
-</div>
+<script type='text/javascript'>
+$(document).ready(function(){
+  $('.edit_jam').bind('ajax:success', function(){
+    alert("Jam session joined!");
+    $('#join-jam-session').modal('hide');
+  });
+  $('.edit_jam').bind('ajax:error', function(){
+    alert("Jam session couldn't be joined. Please try again.");
+    $('#join-jam-session').modal('hide');
+  });
+});
+</script>

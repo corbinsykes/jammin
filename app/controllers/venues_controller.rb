@@ -14,7 +14,7 @@ class VenuesController < ApplicationController
   end
 
   def create
-    @address = Address.new params[:address]
+    @address = Address.new params[:address].merge(creator_id: @current_user.id)
     @venue   = @address.as_venue
     if @venue.blank?
       render :new

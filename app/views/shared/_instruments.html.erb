@@ -1,0 +1,6 @@
+<p>Instrument(s)</p>
+<% instruments.each do |instrument| %>
+  <%= form.label instrument.name %>
+  <%= check_box_tag 'instrument_ids[]', instrument.id -%>
+  </br>
+<% end %>
